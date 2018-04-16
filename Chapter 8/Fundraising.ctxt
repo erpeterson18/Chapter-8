@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Fundraising()
+comment1.params=
+comment1.target=void\ main()
+comment2.params=money
+comment2.target=void\ fund(int)
+numComments=3

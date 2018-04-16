@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=num
+comment0.target=void\ n(int)
+comment1.params=num
+comment1.target=void\ zero(int)
+comment2.params=s
+comment2.target=void\ str(java.lang.String)
+comment3.params=num\ d
+comment3.target=boolean\ prime(int,\ int)
+comment4.params=n
+comment4.target=int\ fib(int)
+numComments=5
