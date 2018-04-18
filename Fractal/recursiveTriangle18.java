@@ -6,17 +6,17 @@ public class recursiveTriangle18 extends JApplet
    private final int APPLET_WIDTH = 800;
    private final int APPLET_HEIGHT = 800;
 
-/*
+ /*
    //x is accross and y is down
    point 1 - Right  A x[0],y[0] (720,600)
    point 2 - Left   B x[1],y[1]
    point 3 - Top    C x[2],y[2]
    point 4 draws back to point 1 to complete triangle
 
-*/  private int[] xPos = {720, 80, 400, 720};
+ */  private int[] xPos = {720, 80, 400, 720};
     private int[] yPos = {600, 600, 40, 600};
     
-    private static int run = 2;
+    private static int run = 10;
 
 
    //-----------------------------------------------------------------
@@ -57,6 +57,8 @@ public class recursiveTriangle18 extends JApplet
        page.drawLine(xMid[1],yMid[1],xMid[2],yMid[2]);
        page.drawLine(xMid[2],yMid[2],xMid[0],yMid[0]);
        
+       run-=1;
+       
        if(run == 0)
        {
            return;
@@ -67,15 +69,21 @@ public class recursiveTriangle18 extends JApplet
            int[] xNew1 = {xMid[2], xMid[1], xPos[2], xMid[2]};
            int[] yNew1 = {yMid[2], yMid[1], yPos[2], yMid[2]};
            
-           int[] xNew2 = {xPos[0], xMid[2], xPos[2], xMid[1]};
-           int[] yNew2 = {yMid[1], yMid[2], yPos[2], yMid[1]};
+           int[] xNew2 = {xMid[0], xPos[1], xMid[1], xMid[0]};
+           int[] yNew2 = {yMid[0], yPos[1], yMid[1], yMid[0]};
            
-           int[] xNew3 = {xPos[0], xMid[0], xMid[1], xPos[0]};
-           int[] yNew3 = {yPos[0], yMid[0], yMid[1], yPos[0]};
+           int[] xNew3 = {xPos[0], xMid[0], xMid[2], xPos[0]};
+           int[] yNew3 = {yPos[0], yMid[0], yMid[2], yPos[0]};
            
-           Triangle(xNew1, yNew1, page);
            
-           Triangle(xNew3, yNew3, page);
+           
+           if(run > 0)
+           {
+               Triangle(xNew1, yNew1, page);
+               Triangle(xNew2, yNew2, page);
+               Triangle(xNew3, yNew3, page);
+               
+           }
            
        }
        
