@@ -16,7 +16,7 @@ public class recursiveTriangle18 extends JApplet
  */  private int[] xPos = {720, 80, 400, 720};
     private int[] yPos = {600, 600, 40, 600};
     
-    private static int run = 10;
+    private static int run = 5;
 
 
    //-----------------------------------------------------------------
@@ -59,12 +59,7 @@ public class recursiveTriangle18 extends JApplet
        
        run-=1;
        
-       if(run == 0)
-       {
-           return;
-       }
-       
-       else
+       if(run>0)
        {
            int[] xNew1 = {xMid[2], xMid[1], xPos[2], xMid[2]};
            int[] yNew1 = {yMid[2], yMid[1], yPos[2], yMid[2]};
