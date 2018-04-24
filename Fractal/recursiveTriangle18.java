@@ -18,7 +18,7 @@ public class recursiveTriangle18 extends JApplet
  */ private int[] xPos = {720, 80, 400, 720};
     private int[] yPos = {600, 600, 40, 600};
 
-    private static int run = 5;
+    private static int run = 20;
 
 
    //-----------------------------------------------------------------
@@ -48,7 +48,7 @@ public class recursiveTriangle18 extends JApplet
        //finds the distance between the midpoints for the base case
        double a = Math.pow((xPos[1]+(xPos[0]-xPos[1])/2)-(xPos[2]+(xPos[1]-xPos[2])/2),2);
        double b = Math.pow((yPos[1]+(yPos[0]-yPos[1])/2)-(yPos[2]+(yPos[1]-yPos[2])/2),2);
-       if(Math.sqrt(a + b) <= 2)
+       if(Math.sqrt(a + b) <= 20)
        {
            return;
 
@@ -57,12 +57,12 @@ public class recursiveTriangle18 extends JApplet
        else
        {
        
-       try
-       {
-          //pause program for quarter-sec (in miliseconds)
-          Thread.sleep(50);
-       }
-       catch(InterruptedException e) {}
+           try
+           {
+              //pause program for quarter-sec (in miliseconds)
+              Thread.sleep(50);
+           }
+           catch(InterruptedException e) {}
            int[] xMid = new int[3];
            int[] yMid = new int[3];
            xMid[0] = xPos[1]+(xPos[0]-xPos[1])/2;
